@@ -10,13 +10,7 @@ GROUP BY
     fish_type
 
 HAVING
-    AVG(    
-        CASE
-            WHEN length <= 10 THEN 10
-            ELSE length
-        END
-       ) >= 33
-    -- AVG(IFNULL(length, 10))
+    AVG(IFNULL(length, 10)) >= 33
     
 ORDER BY
     fish_type ASC
